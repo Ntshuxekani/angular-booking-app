@@ -1,0 +1,59 @@
+
+   <div>
+     <h1>{{title}}</h1>
+     <div class="formsG">
+       <h3>NgaliNtsetsi booking App </h3>
+       <label> Name:<br>
+        <input type="text" [(ngModel)]="ngname" Placeholder="name">
+      </label>
+      <br>
+      <label> Surname:<br>
+        <input type="text" [(ngModel)]="ngsurname" Placeholder="surname">
+      </label>
+    </div>
+      <br>
+   <form>
+     Gender:
+         <select>
+            <option value="male">Male
+            <option value="female">Female
+            </option>
+
+         </select>
+   </form>
+   <br>
+   Booking: 
+        <select [(ngModel)]="selectedbooking">
+          <label for="typeofBooking">type of booking:</label>
+          <option *ngFor="let booking of bookings; let i=index">{{booking}}</option>
+        </select>
+
+
+        <div class="formsG" *ngIf = "selectedbooking ==='hotel'">
+
+          <input type="radio"name="1day"value="1 day">1 day <br>
+          <input type="radio"name="1day"value="2 days">2 days <br>
+          <input type="radio"name="1day"value="3 days">3 days <br>
+
+        </div>
+
+        <div class="formsG" *ngIf = "selectedbooking ==='bus'">
+          <select class="formsG" ID="busFrom" required>
+            <label for="busFrom">FROM:</label>
+              <option *ngFor="let b of busFrom" >{{b}}</option>
+          </select>
+
+          <select>
+            <label for="busTo">To:</label>
+            <option *ngFor="let p of busTo" [value]="busTo" >{{p}}</option>
+            </select>
+        </div>
+        <div class="formsG" *ngIf = "selectedbooking ==='computer'">
+            <input type="radio"name="1hour"value="1 hour">1 hour <br>
+            <input type="radio"name="1hours"value="2 hours">2 hours <br>
+            <input type="radio"name="1hours"value="3 hours">3 hours <br>
+          </div>
+        
+       <br>
+        <button (click)= "display()">AddList</button>
+      </div>

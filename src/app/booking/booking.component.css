@@ -9,6 +9,11 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
   }
+  p{
+    color: rgb(141, 51, 153);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
   body {
     margin: 2em;
     background-color: rgb(63, 12, 15);
@@ -18,11 +23,10 @@ h1 {
     font-family: Cambria, Georgia;
   }
   button{
-    background-color: rgb(12, 63, 60);
     color: rgb(63, 12, 15); 
 } 
   /* everywhere else */
   * {
-    background-color: rgb(63, 12, 52);
+    background-color: rgb(12, 63, 19); 
     font-family: Arial, Helvetica, sans-serif;
   }

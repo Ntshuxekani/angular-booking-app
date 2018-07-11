@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Login';
+  
+  username:string;
+  ngUname:string;
+
+  
+  display(): void{
+    this.username="welcome  " +this.ngUname+ " ";
+
+  
+  }
+ 
+   
 }
+
+
